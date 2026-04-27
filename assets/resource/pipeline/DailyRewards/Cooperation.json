@@ -31,8 +31,7 @@
                 ],
                 "end_hold": 300
             }
-        },
-        "next": []
+        }
     },
     "CooperationSearch": {
         "desc": "寻找协同作战",
