@@ -27,7 +27,8 @@
             }
         },
         "next": [
-            "EmailFlag"
+            "EmailFlag",
+            "Email"
         ]
     },
     "EmailFlag": {
@@ -47,8 +48,7 @@
             }
         },
         "next": [
-            "EmailClaim",
-            "Email"
+            "EmailClaim"
         ]
     },
     "EmailClaim": {
