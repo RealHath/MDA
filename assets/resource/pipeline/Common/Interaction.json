@@ -48,9 +48,9 @@
             "param": {
                 "roi": [
                     785,
-                    52,
+                    31,
                     42,
-                    121
+                    142
                 ],
                 "template": [
                     "CloseButton.png"
