@@ -1,13 +1,13 @@
 {
     "Mission": {
-        "desc": "任务列表入口",
+        "desc": "任务收取入口",
         "next": [
             "MissionStart",
             "EndTask"
         ]
     },
     "MissionStart": {
-        "desc": "任务列表",
+        "desc": "任务收取",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
