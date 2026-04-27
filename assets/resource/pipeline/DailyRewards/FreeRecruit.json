@@ -1,0 +1,104 @@
+{
+    "FreeRecruit": {
+        "desc": "免费招募入口",
+        "max_hit": 1,
+        "next": [
+            "FreeRecruitStart",
+            "EndTask"
+        ]
+    },
+    "FreeRecruitStart": {
+        "desc": "免费招募",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "FreeRecruitFlag"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]FreeRecruitAble",
+            "EnterHall"
+        ]
+    },
+    "FreeRecruitAble": {
+        "desc": "可以免费招募",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "FreeRecruitFlag"
+                ]
+            }
+        },
+        "next": [
+            "FreeRecruitClick"
+        ]
+    },
+    "FreeRecruitClick": {
+        "desc": "点击免费招募",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    480,
+                    593,
+                    43,
+                    14
+                ],
+                "expected": [
+                    ".*免费.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]SkipPlot",
+            "RecruitConfirm"
+        ]
+    },
+    "FreeRecruitFlag": {
+        "desc": "免费招募的标识",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    752,
+                    668,
+                    60,
+                    17
+                ],
+                "expected": [
+                    ".*免费.*"
+                ]
+            }
+        }
+    },
+    "RecruitConfirm": {
+        "desc": "招募确认",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    485,
+                    633,
+                    146,
+                    34
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 1000
+    }
+}
