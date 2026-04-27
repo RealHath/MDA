@@ -1,0 +1,14 @@
+{
+    "task": [
+        {
+            "name": "Cooperation",
+            "label": "$task.Cooperation.label",
+            "entry": "Cooperation",
+            "description": "$task.Cooperation.description",
+            "group": [
+                "daily"
+            ]
+        }
+    ],
+    "option": {}
+}

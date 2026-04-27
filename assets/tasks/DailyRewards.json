@@ -7,7 +7,11 @@
             "description": "$task.DailyRewards.description",
             "option": [
                 "FriendPoints",
-                "Email"
+                "Email",
+                "RankingRewards",
+                "Mission",
+                "Pass",
+                "FreeRecruit"
             ],
             "group": [
                 "daily"
@@ -53,6 +57,94 @@
                     "name": "No",
                     "pipeline_override": {
                         "Email": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "RankingRewards": {
+            "type": "switch",
+            "label": "$option.RankingRewards.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "RankingRewards": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "RankingRewards": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "Mission": {
+            "type": "switch",
+            "label": "$option.Mission.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "Mission": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Mission": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "Pass": {
+            "type": "switch",
+            "label": "$option.Pass.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "Pass": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Pass": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "FreeRecruit": {
+            "type": "switch",
+            "label": "$option.FreeRecruit.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "FreeRecruit": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "FreeRecruit": {
                             "enabled": false
                         }
                     }

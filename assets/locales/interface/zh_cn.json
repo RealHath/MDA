@@ -72,7 +72,13 @@
     "option.EpisodeReward.label": "领取花絮奖励",
     "option.EpisodeViewingReward.label": "领取花絮鉴赏会奖励",
     "task.DailyRewards.label": "每日奖励",
-    "task.DailyRewards.description": "领取友情点、邮箱等每日奖励",
+    "task.DailyRewards.description": "领取各类每日奖励",
     "option.FriendPoints.label": "友情点收发",
-    "option.Email.label": "邮箱领取"
+    "option.Email.label": "邮箱领取",
+    "option.RankingRewards.label": "排名奖励",
+    "option.Mission.label": "任务收取",
+    "option.Pass.label": "Pass奖励",
+    "task.Cooperation.label": "协同作战",
+    "task.Cooperation.description": "完成协同作战",
+    "option.FreeRecruit.label": "免费招募"
 }
