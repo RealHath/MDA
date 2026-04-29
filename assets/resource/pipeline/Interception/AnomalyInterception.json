@@ -35,7 +35,7 @@
             "[JumpBack]NextAnomaly"
         ]
     },
-    "Challenge": {
+    "InterceptionChallenge": {
         "desc": "挑战",
         "recognition": {
             "type": "OCR",
@@ -100,7 +100,7 @@
             }
         },
         "next": [
-            "Challenge"
+            "InterceptionChallenge"
         ]
     },
     "AnomalyMirrorContainer": {
@@ -121,7 +121,7 @@
             }
         },
         "next": [
-            "Challenge"
+            "InterceptionChallenge"
         ]
     },
     "AnomalyIndivilia": {
@@ -142,7 +142,7 @@
             }
         },
         "next": [
-            "Challenge"
+            "InterceptionChallenge"
         ]
     },
     "AnomalyUltra": {
@@ -163,7 +163,7 @@
             }
         },
         "next": [
-            "Challenge"
+            "InterceptionChallenge"
         ]
     },
     "AnomalyHarvester": {
@@ -184,7 +184,7 @@
             }
         },
         "next": [
-            "Challenge"
+            "InterceptionChallenge"
         ]
     }
 }
