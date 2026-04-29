@@ -68,11 +68,31 @@
             }
         },
         "next": [
+            "MissionClaimed",
             "[JumpBack]MissionClaimAll",
             "[JumpBack]RewardConfirm",
-            "MissionRedDot",
-            "MissionClaimed"
+            "MissionRedDot"
         ]
+    },
+    "MissionClaimAll": {
+        "desc": "任务奖励领取",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    707,
+                    630,
+                    108,
+                    35
+                ],
+                "expected": [
+                    ".*全部.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
     },
     "MissionClaimed": {
         "desc": "已领取",
@@ -95,31 +115,11 @@
                     180,
                     180
                 ],
-                "count": 500
+                "count": 200
             }
         },
         "next": [
             "PageClose"
         ]
-    },
-    "MissionClaimAll": {
-        "desc": "任务奖励领取",
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    707,
-                    630,
-                    108,
-                    35
-                ],
-                "expected": [
-                    ".*全部.*"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        }
     }
 }
