@@ -1,5 +1,5 @@
 {
-    "StartOverlock": {
+    "SimulationRoomStartOverclock": {
         "desc": "开始超频",
         "recognition": {
             "type": "TemplateMatch",
@@ -27,11 +27,11 @@
             }
         },
         "next": [
-            "[JumpBack]ClickBIOSSetting",
-            "BeginOverlockSimulation"
+            "[JumpBack]SimulationRoomOpenBiosSetting",
+            "SimulationRoomBeginOverclockSimulation"
         ]
     },
-    "ClickBIOSSetting": {
+    "SimulationRoomOpenBiosSetting": {
         "desc": "点击BIOS设置",
         "recognition": {
             "type": "OCR",
@@ -52,15 +52,15 @@
         },
         "post_wait_freezes": 1000,
         "next": [
-            "BIOSSetting"
+            "SimulationRoomBiosSettingFlow"
         ]
     },
-    "BIOSSetting": {
+    "SimulationRoomBiosSettingFlow": {
         "desc": "BIOS设置",
         "next": [
             "SimulationRoomOverclockLevel25Selected",
-            "[JumpBack]OptionSelect",
-            "[JumpBack]SimulationRoomScrollUp"
+            "[JumpBack]SimulationRoomSelectOverclockOption",
+            "[JumpBack]SimulationRoomScrollOverclockOptionsUp"
         ]
     },
     "SimulationRoomOverclockLevel25Selected": {
@@ -83,7 +83,7 @@
             "type": "Click"
         }
     },
-    "OptionSelect": {
+    "SimulationRoomSelectOverclockOption": {
         "desc": "选择超频选项",
         "recognition": {
             "type": "TemplateMatch",
@@ -112,7 +112,7 @@
         },
         "post_wait_freezes": 500
     },
-    "SimulationRoomScrollUp": {
+    "SimulationRoomScrollOverclockOptionsUp": {
         "desc": "模拟室超频向上滑动",
         "action": {
             "type": "Swipe",
@@ -130,7 +130,7 @@
         },
         "post_wait_freezes": 20
     },
-    "BeginOverlockSimulation": {
+    "SimulationRoomBeginOverclockSimulation": {
         "desc": "开始超频",
         "recognition": {
             "type": "OCR",
@@ -150,10 +150,10 @@
             "type": "Click"
         },
         "next": [
-            "SelectBattle"
+            "SimulationRoomSelectBattle"
         ]
     },
-    "SelectBattle": {
+    "SimulationRoomSelectBattle": {
         "desc": "选择战斗",
         "recognition": {
             "type": "TemplateMatch",
@@ -174,14 +174,14 @@
         },
         "post_wait_freezes": 500,
         "next": [
-            "[JumpBack]EndSimulation",
-            "ConfirmEnd",
-            "SelectBattle",
-            "[JumpBack]SelectBuff",
+            "[JumpBack]SimulationRoomEndSimulation",
+            "SimulationRoomConfirmBattleEnd",
+            "SimulationRoomSelectBattle",
+            "[JumpBack]SimulationRoomSelectBuff",
             "[JumpBack]StartBattle"
         ]
     },
-    "ConfirmEnd": {
+    "SimulationRoomConfirmBattleEnd": {
         "desc": "确认结束",
         "recognition": {
             "type": "TemplateMatch",
@@ -202,10 +202,10 @@
         },
         "post_wait_freezes": 500,
         "next": [
-            "SelectBuff"
+            "SimulationRoomSelectBuff"
         ]
     },
-    "SelectBuff": {
+    "SimulationRoomSelectBuff": {
         "desc": "选择增益效果",
         "recognition": {
             "type": "OCR",
@@ -228,10 +228,10 @@
         },
         "post_wait_freezes": 500,
         "next": [
-            "ConfirmBuff"
+            "SimulationRoomConfirmBuff"
         ]
     },
-    "ConfirmBuff": {
+    "SimulationRoomConfirmBuff": {
         "desc": "确认增益",
         "recognition": {
             "type": "TemplateMatch",

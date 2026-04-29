@@ -1,5 +1,5 @@
 {
-    "BeginSimulation": {
+    "SimulationRoomBeginSimulation": {
         "desc": "开始模拟",
         "recognition": {
             "type": "And",
@@ -14,11 +14,11 @@
             "type": "Click"
         },
         "next": [
-            "[JumpBack]ClaimImmediately",
-            "QuickSimulation"
+            "[JumpBack]SimulationRoomClaimImmediately",
+            "SimulationRoomQuickSimulation"
         ]
     },
-    "ClaimImmediately": {
+    "SimulationRoomClaimImmediately": {
         "desc": "快速模拟将立即完成",
         "recognition": {
             "type": "TemplateMatch",
@@ -38,7 +38,7 @@
             "type": "Click"
         }
     },
-    "QuickSimulation": {
+    "SimulationRoomQuickSimulation": {
         "desc": "快速模拟",
         "recognition": {
             "type": "OCR",
@@ -58,10 +58,10 @@
             "type": "Click"
         },
         "next": [
-            "EndSimulation"
+            "SimulationRoomEndSimulation"
         ]
     },
-    "EndSimulation": {
+    "SimulationRoomEndSimulation": {
         "desc": "模拟结束",
         "recognition": {
             "type": "OCR",

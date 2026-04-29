@@ -3,7 +3,7 @@
         {
             "name": "SimulationRoom",
             "label": "$task.SimulationRoom.label",
-            "entry": "SimulationRoom",
+            "entry": "SimulationRoomMain",
             "description": "$task.SimulationRoom.description",
             "option": [
                 "BeginSimulation",
@@ -22,7 +22,7 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "BeginSimulation": {
+                        "SimulationRoomBeginSimulation": {
                             "enabled": true
                         }
                     }
@@ -30,7 +30,7 @@
                 {
                     "name": "No",
                     "pipeline_override": {
-                        "BeginSimulation": {
+                        "SimulationRoomBeginSimulation": {
                             "enabled": false
                         }
                     }
@@ -44,7 +44,7 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "StartOverlock": {
+                        "SimulationRoomStartOverclock": {
                             "enabled": true
                         }
                     },
@@ -55,7 +55,7 @@
                 {
                     "name": "No",
                     "pipeline_override": {
-                        "StartOverlock": {
+                        "SimulationRoomStartOverclock": {
                             "enabled": false
                         }
                     }
@@ -70,7 +70,7 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "BIOSSetting": {
+                        "SimulationRoomBiosSettingFlow": {
                             "enabled": true
                         }
                     }
@@ -78,7 +78,7 @@
                 {
                     "name": "No",
                     "pipeline_override": {
-                        "BIOSSetting": {
+                        "SimulationRoomBiosSettingFlow": {
                             "enabled": false
                         }
                     }

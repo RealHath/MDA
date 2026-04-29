@@ -1,11 +1,11 @@
 {
-    "SimulationRoom": {
+    "SimulationRoomMain": {
         "next": [
-            "EnterSimulationRoom",
+            "SimulationRoomEnter",
             "[JumpBack]EnterArk"
         ]
     },
-    "EnterSimulationRoom": {
+    "SimulationRoomEnter": {
         "desc": "进入模拟室",
         "recognition": {
             "type": "OCR",
@@ -25,12 +25,12 @@
             "type": "Click"
         },
         "next": [
-            "[JumpBack]BIOSUpdate",
-            "FlagInSimulationRoom",
-            "EnterSimulationRoom"
+            "[JumpBack]SimulationRoomConfirmBiosUpdate",
+            "SimulationRoomOnMainPage",
+            "SimulationRoomEnter"
         ]
     },
-    "BIOSUpdate": {
+    "SimulationRoomConfirmBiosUpdate": {
         "desc": "模拟室超频更新",
         "recognition": {
             "type": "OCR",
@@ -50,7 +50,7 @@
             "type": "Click"
         }
     },
-    "FlagInSimulationRoom": {
+    "SimulationRoomOnMainPage": {
         "desc": "处于模拟室",
         "recognition": {
             "type": "OCR",
@@ -67,8 +67,8 @@
             }
         },
         "next": [
-            "[JumpBack]BeginSimulation",
-            "[JumpBack]StartOverlock",
+            "[JumpBack]SimulationRoomBeginSimulation",
+            "[JumpBack]SimulationRoomStartOverclock",
             "EndTask"
         ]
     }
