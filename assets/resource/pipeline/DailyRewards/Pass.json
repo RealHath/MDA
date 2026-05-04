@@ -126,8 +126,7 @@
         "desc": "领取Pass奖励流程",
         "next": [
             "[JumpBack]DailyRewardsPassClaimAll",
-            "[JumpBack]CommonConfirmReward",
-            "CommonEndTask"
+            "CommonConfirmReward"
         ]
     },
     "DailyRewardsPassClaimed": {
