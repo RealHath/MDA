@@ -32,7 +32,7 @@
                 ]
             }
         },
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 1000,
         "next": [
             "AdviseEnterAdvisePage",
             "[JumpBack]AdviseNikkeMainPageEntered",
