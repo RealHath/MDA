@@ -24,6 +24,9 @@
                 {
                     "name": "StarAnis",
                     "label": "$option.LargeEventTheme.StarAnis",
+                    "option": [
+                        "LargeEventStarAnisMerchBagClick"
+                    ],
                     "pipeline_override": {
                         "LargeEventEntry": {
                             "recognition": {
@@ -57,6 +60,10 @@
                             }
                         }
                     }
+                },
+                {
+                    "name": "Other",
+                    "label": "$option.LargeEventTheme.Other"
                 }
             ]
         },
@@ -103,6 +110,29 @@
                     "pipeline_override": {
                         "LargeEventMission": {
                             "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "LargeEventStarAnisMerchBagClick": {
+            "type": "switch",
+            "default_case": "Yes",
+            "label": "$option.LargeEventStarAnisMerchBagClick.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "LargeEventStarAnisMerchBagClick": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "LargeEventStarAnisMerchBagClick": {
+                            "enabled": false
                         }
                     }
                 }

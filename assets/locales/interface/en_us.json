@@ -102,11 +102,13 @@
     "task.LargeEvent.description": "Enter the large event interface and complete related tasks",
     "option.LargeEventTheme.label": "Event Theme",
     "option.LargeEventTheme.StarAnis": "STAR ANIS",
+    "option.LargeEventTheme.Other": "Other",
     "option.LargeEventContent.label": "Large Event Content",
     "option.LargeEventContent.LargeEventLoginStamp": "Login Stamp",
     "option.LargeEventContent.LargeEventChallenge": "Challenge",
     "option.LargeEventContent.LargeEventStory": "Story",
     "option.LargeEventContent.LargeEventMission": "Mission",
+    "option.LargeEventStarAnisMerchBagClick.label": "Merch Bag",
     "option.LargeEventStoryPriority.label": "Event Story Priority",
     "option.LargeEventStoryPriority.Story2First": "STORY2 First",
     "option.LargeEventStoryPriority.Story1First": "STORY1 First"

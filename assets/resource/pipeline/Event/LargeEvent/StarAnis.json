@@ -1,0 +1,162 @@
+{
+    "LargeEventStarAnisMerchBagClick": {
+        "desc": "点击周边包包",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1208,
+                    130,
+                    63,
+                    21
+                ],
+                "expected": [
+                    "周边包包"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventStarAnisMerchLotteryClick",
+            "LargeEventStarAnisMerchGachaClick"
+        ]
+    },
+    "LargeEventStarAnisMerchLotteryClick": {
+        "desc": "点击抽取刮刮乐周边",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    681,
+                    417,
+                    106,
+                    102
+                ],
+                "expected": [
+                    "抽取刮刮乐周边"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventStarAnisPlayMerchLotteryClick"
+        ]
+    },
+    "LargeEventStarAnisMerchGachaClick": {
+        "desc": "点击抽取周边",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1212,
+                    166,
+                    58,
+                    21
+                ],
+                "expected": [
+                    "抽取周边"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "LargeEventStarAnisLotteryGrayButtonVisible",
+            "LargeEventStarAnisPlayMerchLotteryClick",
+            "LargeEventGoBack"
+        ]
+    },
+    "LargeEventStarAnisPlayMerchLotteryClick": {
+        "desc": "点击画面进行抽取",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    589,
+                    515,
+                    101,
+                    29
+                ],
+                "expected": [
+                    ".*抽取.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 500,
+        "next": [
+            "LargeEventStarAnisMerchLotteryClick"
+        ]
+    },
+    "LargeEventStarAnisLotteryComplete": {
+        "desc": "抽取次数耗尽",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventStarAnisLotteryGrayButtonVisible"
+                ]
+            }
+        },
+        "next": [
+            "LargeEventStarAnisLotteryConfirmClick"
+        ]
+    },
+    "LargeEventStarAnisLotteryConfirmClick": {
+        "desc": "确认抽取结果",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    489,
+                    490,
+                    36,
+                    33
+                ],
+                "template": [
+                    "Common/ConfirmWithCircle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventGoBack"
+        ]
+    },
+    "LargeEventStarAnisLotteryGrayButtonVisible": {
+        "desc": "抽取按钮变灰",
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    646,
+                    488,
+                    149,
+                    37
+                ],
+                "lower": [
+                    100,
+                    100,
+                    100
+                ],
+                "upper": [
+                    180,
+                    180,
+                    180
+                ],
+                "count": 4000
+            }
+        }
+    }
+}
