@@ -37,7 +37,9 @@
         },
         "action": {
             "type": "Click"
-        }
+        },
+        "repeat": 5,
+        "repeat_delay": 200
     },
     "DialoguesClickOption": {
         "desc": "点击选项",
